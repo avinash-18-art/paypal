@@ -1,8 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ffcc00, #ffdd33);
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15, #fb923c, #f472b6);
+  background-size: 1200% 1200%;
+  animation: rainbowBackground 15s ease infinite;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes rainbowBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .paypal-container {
@@ -13,22 +27,25 @@ body {
 }
 
 .paypal-card {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   width: 90%;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .paypal-logo {
   width: 150px;
   margin-bottom: 20px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .paypal-button {
-  background-color: #0070ba;
+  background: linear-gradient(90deg, #0070ba, #005ea6);
   color: white;
   border: none;
   padding: 14px 24px;
@@ -36,21 +53,26 @@ body {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
   margin-top: 20px;
   width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 112, 186, 0.3);
 }
 
 .paypal-button:hover {
-  background-color: #005ea6;
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #005ea6, #003f75);
 }
 
 h1 {
   margin-bottom: 10px;
   color: #003087;
+  font-size: 28px;
+  text-shadow: 1px 1px 2px rgba(0, 48, 135, 0.2);
 }
 
 p {
-  color: #333;
+  color: #444;
   font-size: 16px;
+  line-height: 1.5;
 }
